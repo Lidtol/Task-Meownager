@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Diseño de la interfaz
+
+<!-- Una sola pantalla, con una tarjeta central grande sobre un fondo pastel suave:
+
+Cabecera: título “Cute Task Manager” con detalles decorativos y la fecha de hoy.
+Resumen: tareas pendientes y barra de progreso con porcentaje.
+Formulario: título, prioridad, categoría y botón de añadir.
+Filtros: Todas / Pendientes / Completadas.
+Lista de tareas: tarjetas con casilla, título, etiquetas de prioridad y categoría, y botones de editar y eliminar.
+Pie: botón “Borrar completadas”.
+Estado vacío: mensaje bonito cuando no hay tareas (o no hay ninguna en el filtro activo). -->
+<header>
+    <h1>Cute Task Manager</h1>
+    <p id="date"></p>
+</header>
+<main>
+    <section id="summary">
+        <h2>Resumen</h2>
+        <p>Tareas pendientes: <span id="pending-tasks">0</span></p>
+        <div id="progress-bar">
+            <div id="progress"></div>
+        </div>
+        <p>Progreso: <span id="progress-percentage">0%</span></p>
+    </section>
+
+    <section id="task-form">
+        <h2>Añadir Tarea</h2>
+        <form id="add-task-form">
+            <input type="text" id="task-title" placeholder="Título de la tarea" required>
+            <select id="task-priority">
+                <option value="alta">Alta</option>
+                <option value="media">Media</option>
+                <option value="baja">Baja</option>
+            </select>
+            <input type="text" id="task-category" placeholder="Categoría">
+            <button type="submit">Añadir</button>
+        </form>
+    </section>
+
+    <section id="filters">
+        <button data-filter="all">Todas</button>
+        <button data-filter="pending">Pendientes</button>
+        <button data-filter="completed">Completadas</button>
+    </section>
+
+    <section id="task-list">
+        <!-- Aquí se mostrarán las tarjetas de tareas -->
+    </section>
+
+    <footer>
+        <button id="clear-completed">Borrar completadas</button>
+    </footer>
+
+    <div id="empty-state" style="display: none;">
+        <p>No hay tareas para mostrar.</p>
+    </div>
+
+
+</body>
+</html>
