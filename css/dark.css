@@ -5,49 +5,49 @@
    ========================================================================== */
 
 :root[data-theme="dark"] {
-    color-scheme: dark;
+  color-scheme: dark;
 
-    --bg: #1c1a22;
-    --surface: #262330;
-    --text: #ece8f2;
-    --text-soft: #a39cb0;
-    --border: #353143;
+  --bg: #1c1a22;
+  --surface: #262330;
+  --text: #ece8f2;
+  --text-soft: #a39cb0;
+  --border: #353143;
 
-    /* Pasteles más profundos para que el texto claro se lea bien */
-    --pink: #7a4a63;
-    --pink-strong: #96587a;
-    --lavender: #5b4d85;
-    --mint: #3f6b5a;
-    --peach: #7a5a47;
-    --sky: #43607f;
+  /* Pasteles más profundos para que el texto claro se lea bien */
+  --pink: #7a4a63;
+  --pink-strong: #96587a;
+  --lavender: #5b4d85;
+  --mint: #3f6b5a;
+  --peach: #7a5a47;
+  --sky: #43607f;
 
-    --high: #7a4553;
-    --medium: #7a6a3f;
-    --low: #3f6b5a;
+  --high: #7a4553;
+  --medium: #7a6a3f;
+  --low: #3f6b5a;
 
-    --shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+  --shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
 }
 
 /* Detalles que usan colores fijos en styles.css */
 :root[data-theme="dark"] input[type="text"]::placeholder {
-    color: #7d7690;
+  color: #7d7690;
 }
 
 :root[data-theme="dark"] input[type="text"]:focus,
 :root[data-theme="dark"] select:focus {
-    border-color: var(--pink-strong);
-    box-shadow: 0 0 0 3px rgba(150, 88, 122, 0.45);
+  border-color: var(--pink-strong);
+  box-shadow: 0 0 0 3px rgba(150, 88, 122, 0.45);
 }
 
 /* Degradados con pasteles más luminosos para que destaquen */
 :root[data-theme="dark"] header h1::after,
 :root[data-theme="dark"] #progress {
-    background: linear-gradient(90deg, #f4a9c6, #b9a6ee);
+  background: linear-gradient(90deg, #f4a9c6, #b9a6ee);
 }
 
 :root[data-theme="dark"] .task:hover,
 :root[data-theme="dark"] .task-card:hover {
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.5);
 }
 
 :root[data-theme="dark"] #cancel-edit:hover,
@@ -56,27 +56,27 @@
 :root[data-theme="dark"] #clear-completed:hover,
 :root[data-theme="dark"] .task button:hover,
 :root[data-theme="dark"] .task-card button:hover {
-    color: var(--text);
+  color: var(--text);
 }
 
 /* ---------- Botón para cambiar de tema (sirve en claro y oscuro) ---------- */
 #theme-toggle {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    width: 2.6rem;
-    height: 2.6rem;
-    padding: 0;
-    display: grid;
-    place-items: center;
-    font-size: 1.1rem;
-    line-height: 1;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 50%;
-    box-shadow: var(--shadow);
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 2.6rem;
+  height: 2.6rem;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  font-size: 1.1rem;
+  line-height: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  box-shadow: var(--shadow);
 }
 
 #theme-toggle:hover {
-    background: var(--lavender);
+  background: var(--lavender);
 }
