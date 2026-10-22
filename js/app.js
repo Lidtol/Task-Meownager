@@ -1,9 +1,4 @@
 
-// ==========================================
-// CUTE TASK MANAGER ♡
-// Adaptado a tu index.html original
-// ==========================================
-
 class Tareas {
     constructor() {
         this.tareas = [];
