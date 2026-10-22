@@ -1,105 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Task Meownager</title>
 
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
 
     <script src="js/app.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Task Meownager</h1>
-        <p id="date"></p>
+      <h1>Task Meownager</h1>
+      <p id="date"></p>
     </header>
 
     <main>
-        <section id="summary">
-            <h2>Resumen</h2>
+      <section id="summary">
+        <h2>Resumen</h2>
 
-            <p>
-                Tareas pendientes:
-                <span id="pending-tasks">0</span>
-            </p>
+        <p>
+          Tareas pendientes:
+          <span id="pending-tasks">0</span>
+        </p>
 
-            <div id="progress-bar">
-                <div id="progress"></div>
-            </div>
-
-            <p>
-                Progreso:
-                <span id="progress-percentage">0%</span>
-            </p>
-        </section>
-
-        <section id="task-form">
-            <h2 id="form-title">Añadir tarea</h2>
-
-            <form id="add-task-form">
-                <input
-                    type="text"
-                    id="task-title"
-                    placeholder="Título de la tarea"
-                    required
-                >
-
-                <select id="task-priority">
-                    <option value="alta">Alta</option>
-                    <option value="media">Media</option>
-                    <option value="baja">Baja</option>
-                </select>
-
-                <input
-                    type="text"
-                    id="task-category"
-                    placeholder="Categoría"
-                >
-
-                <button type="submit">Añadir</button>
-
-                <button
-                    type="button"
-                    id="cancel-edit"
-                    hidden
-                >
-                    Cancelar
-                </button>
-            </form>
-        </section>
-
-        <section id="filters">
-            <button type="button" data-filter="all">
-                Todas
-            </button>
-
-            <button type="button" data-filter="pending">
-                Pendientes
-            </button>
-
-            <button type="button" data-filter="completed">
-                Completadas
-            </button>
-        </section>
-
-        <section id="task-list">
-            <!-- Aquí se mostrarán las tarjetas de tareas -->
-        </section>
-
-        <footer>
-            <button type="button" id="clear-completed">
-                Borrar completadas
-            </button>
-        </footer>
-
-        <div id="empty-state" style="display: none;">
-            <h3>No hay tareas</h3>
-            <p>Aún no tienes tareas para mostrar.</p>
-            <p>Añade una tarea para empezar.</p>
+        <div id="progress-bar">
+          <div id="progress"></div>
         </div>
+
+        <p>
+          Progreso:
+          <span id="progress-percentage">0%</span>
+        </p>
+      </section>
+
+      <section id="task-form">
+        <h2 id="form-title">Añadir tarea</h2>
+
+        <form id="add-task-form">
+          <input
+            type="text"
+            id="task-title"
+            placeholder="Título de la tarea"
+            required
+          />
+
+          <select id="task-priority">
+            <option value="alta">Alta</option>
+            <option value="media">Media</option>
+            <option value="baja">Baja</option>
+          </select>
+
+          <input type="text" id="task-category" placeholder="Categoría" />
+
+          <button type="submit">Añadir</button>
+
+          <button type="button" id="cancel-edit" hidden>Cancelar</button>
+        </form>
+      </section>
+
+      <section id="filters">
+        <button type="button" data-filter="all">Todas</button>
+
+        <button type="button" data-filter="pending">Pendientes</button>
+
+        <button type="button" data-filter="completed">Completadas</button>
+      </section>
+
+      <section id="task-list">
+        <!-- Aquí se mostrarán las tarjetas de tareas -->
+      </section>
+
+      <footer>
+        <button type="button" id="clear-completed">Borrar completadas</button>
+      </footer>
+
+      <div id="empty-state" style="display: none">
+        <h3>No hay tareas</h3>
+        <p>Aún no tienes tareas para mostrar.</p>
+        <p>Añade una tarea para empezar.</p>
+      </div>
     </main>
-</body>
+  </body>
 </html>
