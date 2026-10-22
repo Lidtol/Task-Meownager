@@ -170,16 +170,41 @@ class Tareas {
         const valor = this.progreso();
 
         progreso.style.width = `${valor}%`;
-        porcentaje.textContent = `Progreso: ${valor}%`;
+        porcentaje.textContent = `${valor}%`;
 
         barra.setAttribute("role", "progressbar");
         barra.setAttribute("aria-valuemin", "0");
         barra.setAttribute("aria-valuemax", "100");
         barra.setAttribute("aria-valuenow", valor);
 
+        this.actualizarMascota(valor);
+
         const botonBorrar = document.getElementById("clear-completed");
 
         botonBorrar.disabled = !this.tareas.some(t => t.completada);
+    }
+
+    // La mascota cambia de cara y mensaje según el progreso
+    actualizarMascota(valor) {
+        const cara = document.getElementById("mascot-face");
+        const mensaje = document.getElementById("mascot-message");
+
+        let estado;
+
+        if (this.tareas.length === 0) {
+            estado = ["🐱", "¡Miau! Añade tu primera tarea."];
+        } else if (valor === 100) {
+            estado = ["😻", "¡Todo hecho! Eres increíble."];
+        } else if (valor >= 50) {
+            estado = ["😸", "¡Ya casi lo tienes! Sigue así."];
+        } else if (valor > 0) {
+            estado = ["😺", "¡Buen comienzo! Miau."];
+        } else {
+            estado = ["😿", "Tengo ganas de que empieces..."];
+        }
+
+        cara.textContent = estado[0];
+        mensaje.textContent = estado[1];
     }
 
     // Crea una etiqueta de prioridad o categoría
