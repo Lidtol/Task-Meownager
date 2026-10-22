@@ -7,6 +7,8 @@ class Tareas {
         this.claveStorage = "cute-task-manager-tareas";
     }
 
+
+
     // Carga las tareas guardadas en el navegador
     init() {
         try {
@@ -448,4 +450,24 @@ document.addEventListener("DOMContentLoaded", () => {
             tareas.cancelarEdicion();
         });
     }
+
+
+
+const root = document.documentElement;
+const toggle = document.getElementById("theme-toggle");
+
+function applyTheme(theme) {
+    root.setAttribute("data-theme", theme);
+    toggle.textContent = theme === "dark" ? "☀️" : "🌙";
+    localStorage.setItem("theme", theme);
+}
+
+// Tema guardado, o el del sistema si es la primera visita
+const saved = localStorage.getItem("theme");
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+applyTheme(saved || (prefersDark ? "dark" : "light"));
+
+toggle.addEventListener("click", () => {
+    applyTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark");
+});
 });
